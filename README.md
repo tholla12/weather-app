@@ -2,7 +2,7 @@
 
 Search for any city and see the current weather and a 5-day forecast. Built to practise working with APIs in JavaScript.
 
-**Live demo:** _add your GitHub Pages link here_
+**Live demo:** _tholla12.github.io/weather-app_
 
 ## Features
 
