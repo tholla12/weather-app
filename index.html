@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Weather</h1>
+    <p class="intro">Search for a city to see the current weather and a 5-day forecast.</p>
+
+    <form id="searchForm" class="search" novalidate>
+      <label for="cityInput" class="visually-hidden">City name</label>
+      <input id="cityInput" type="text" placeholder="Try London, Lagos or Tokyo" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Messages for loading and errors. aria-live tells screen readers about changes. -->
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section id="result" class="result" hidden>
+      <div class="current">
+        <p class="place" id="place"></p>
+        <p class="temp" id="temp"></p>
+        <p class="summary" id="summary"></p>
+        <dl class="details">
+          <div><dt>Humidity</dt><dd id="humidity"></dd></div>
+          <div><dt>Wind</dt><dd id="wind"></dd></div>
+        </dl>
+      </div>
+
+      <h2>5-day forecast</h2>
+      <ul class="forecast" id="forecast"></ul>
+
+      <div class="units">
+        <button type="button" id="unitToggle">Switch to &deg;F</button>
+      </div>
+    </section>
+  </main>
+
+  <p class="credit">Weather data by <a href="https://open-meteo.com/">Open-Meteo</a>.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
